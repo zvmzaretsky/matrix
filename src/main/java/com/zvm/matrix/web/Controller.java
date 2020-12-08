@@ -49,7 +49,7 @@ public class Controller {
     }
 
     private Integer[] getRandomInts() {
-        Random random = new Random(new Date().getTime());
+        Random random = new Random(new Date().getTime()+1);
         Integer[] ints = new Integer[12];
         for (int i = 0; i < 12; i++) ints[i] = random.nextInt(50);
         return ints;
