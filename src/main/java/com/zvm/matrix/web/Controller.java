@@ -44,6 +44,7 @@ public class Controller {
     private Matrix getNewMatrix() {
         Map<String, Integer[]> map = new HashMap<>();
         map.put("зайці", getRandomInts());
+        map.put("вовки", getRandomInts());
         return new Matrix(map);
     }
 
