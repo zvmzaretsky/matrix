@@ -1,14 +1,30 @@
 package com.zvm.matrix.objects;
 
-public class Tile<T> {
+import java.util.ArrayList;
 
-    private final T[] next;
+public class Tile {
 
-    public Tile(T[] next) {
+    private ArrayList<Tile> next;
+    private Matrix matrix;
+
+    public Tile(ArrayList<Tile> next, Matrix matrix) {
+        this.next = next;
+        this.matrix = matrix;
+    }
+
+    public ArrayList<Tile> getNext() {
+        return next;
+    }
+
+    public void setNext(ArrayList<Tile> next) {
         this.next = next;
     }
 
-    public T[] getNext() {
-        return next;
+    public Matrix getMatrix() {
+        return matrix;
+    }
+
+    public void setMatrix(Matrix matrix) {
+        this.matrix = matrix;
     }
 }
