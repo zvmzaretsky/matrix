@@ -43,13 +43,13 @@ public class Controller {
 
     private Matrix getNewMatrix() {
         Map<String, Integer[]> map = new HashMap<>();
-        map.put("зайці", getRandomInts());
-        map.put("вовки", getRandomInts());
+        map.put("зайці", getRandomInts(0));
+        map.put("вовки", getRandomInts(1));
         return new Matrix(map);
     }
 
-    private Integer[] getRandomInts() {
-        Random random = new Random(new Date().getTime()+1);
+    private Integer[] getRandomInts(int x) {
+        Random random = new Random(new Date().getTime()+x);
         Integer[] ints = new Integer[12];
         for (int i = 0; i < 12; i++) ints[i] = random.nextInt(50);
         return ints;
