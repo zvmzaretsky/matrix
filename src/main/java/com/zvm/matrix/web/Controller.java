@@ -14,10 +14,10 @@ import java.util.*;
 @CrossOrigin
 public class Controller {
 
-    @GetMapping("/matrix")
+    @GetMapping(path = "/matrix", produces = "application/json")
     public Matrix getMatrix(@RequestParam String path) {
 
-        String[] strings = path.split("/");
+        String[] strings = path.split("-");
         int[] ints = Arrays.stream(strings).mapToInt(Integer::parseInt).toArray();
 
         Tile tile = Database.tile;
@@ -50,7 +50,7 @@ public class Controller {
     private Integer[] getRandomInts() {
         Random random = new Random(System.currentTimeMillis());
         Integer[] ints = new Integer[12];
-        for (int i = 0; i < 6; i++) ints[i] = random.nextInt(50);
+        for (int i = 0; i < 12; i++) ints[i] = random.nextInt(50);
         return ints;
     }
 }
