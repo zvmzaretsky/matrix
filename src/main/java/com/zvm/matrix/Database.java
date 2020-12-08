@@ -1,7 +1,5 @@
 package com.zvm.matrix;
 
-
-import com.zvm.matrix.objects.Matrix;
 import com.zvm.matrix.objects.Tile;
 
 public class Database {
