@@ -56,8 +56,8 @@ public class Controller {
 
     private static Matrix getNewMatrix() {
         Map<String, Integer[]> map = new HashMap<>();
-        map.put("зайці", getRandomInts(0));
-        map.put("вовки", getRandomInts(1));
+        map.put("hares", getRandomInts(0));
+        map.put("wolves", getRandomInts(1));
         return new Matrix(map);
     }
 
